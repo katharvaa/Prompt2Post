@@ -2,10 +2,17 @@
 body {
     margin: 0;
     font-family: "Courier New", Courier, monospace;
-    background-color: #18181e;
+    /* background-color: #191A19; */
     color: #FFFFFF;
     line-height: 1.6;
     font-size: 18px;
+    background: linear-gradient(35deg, #0d0d0d, #1a2a1e, #0a0a0a, #1d0f20); /* Very dark black, muted deep green, and pitch black */
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
 }
 
 /* Navbar */
@@ -13,25 +20,27 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3B0B69; /* Glossy purple */
+    /* background-color: #313331;  */
     padding-left: 1%;
     padding-right: 1%;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: linear-gradient(145deg, #000000, #222121, #000000);
+    box-shadow: 0px 2px 4px rgba(18, 9, 24, 0.101); 
 }
 
 .logo {
     cursor: pointer;
     font-size: 1.7rem; /* Increased size */
     font-weight: bold;
-    color: white;
+    color: #4E9F3D;
     text-decoration: none;
     transition: color 0.1s ease;
 }
 
 .logo:hover {
-    color: #f892c8; /* Color on hover */
+    color: #83dc73; /* Color on hover */
 }
 
 .nav-links {
@@ -44,14 +53,14 @@ nav {
 }
 
 .nav-links a {
-    color: #efefef; /* Fluorescent pink */
+    color: #4E9F3D;
     text-decoration: none;
     font-size: 1.2rem; /* Increased size */
     font-weight:600;
 }
 
 .aboutnav:hover, .contactnav:hover {
-    color:#f892c8;
+    color: #83dc73;
 }
 .burger {
     display: none;
@@ -95,7 +104,7 @@ nav {
 h1 {
     font-size: 3rem; /* Increased heading size */
     margin-bottom: 20px;
-    color: #FF1493; /* Fluorescent pink */
+    color: #4E9F3D;
 }
 
 form {
@@ -104,13 +113,18 @@ form {
     align-items: center;
 }
 
+#topic{
+    font-family: Consolas, monaco, monospace;
+    text-align: center;
+}
+
 label {
     font-size: 1.5rem; /* Increased label size */
     color: #FF1493; /* Fluorescent pink */
 }
 
 input {
-    background-color: #555;
+    background-color: #444;
     color: #fff;
     border: none;
     padding: 15px;
@@ -130,7 +144,7 @@ input:focus {
 }
 
 button {
-    background-color: #4B0082; /* Glossy purple */
+    background: linear-gradient(35deg, #6e3b79, #20233f,  #3d6347);
     color: white;
     padding: 15px 30px;
     border: none;
@@ -138,6 +152,7 @@ button {
     cursor: pointer;
     font-size: 1.5rem; /* Increased button text size */
     transition: all 0.3s ease;
+    font-family: Consolas, monaco, monospace;
 }
 
 .button-group {
@@ -153,10 +168,10 @@ button:hover {
 }
 
 #copy-button {
-    background-color: #4B0082; /* Same glossy purple */
+    background: linear-gradient(145deg, #3d6347, #20233f, #6e3b79);
     color: white;
     padding: 15px 30px;
-    border: none;
+    border:#171e6d;
     border-radius: 30px; /* Rounded button */
     cursor: pointer;
     font-size: 1.5rem; /* Same size as other button */
@@ -183,6 +198,7 @@ button, #copy-button {
     margin-top: 2%;
     margin-bottom: 2%;
     width: 85%;
+    font-family: Consolas, monaco, monospace;
     font-size: 1.5rem; /* Increased output text size */
     min-height: 200px;  /* Ensures a base height */
     overflow-y: auto;   /* Adds scrolling if content overflows */
@@ -192,10 +208,21 @@ button, #copy-button {
 /* About Section */
 .about {
     padding: 40px;
-    background-color: #18181e;
+    background-color: #191A19;
     text-align: left;
     font-size: 1.5rem; /* Increased about text size */
     margin-top: 20px;  /* Add margin to ensure spacing */
+    background: linear-gradient(35deg, #0d0d0d, #1a2a1e, #0a0a0a, #1d0f20);
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+
+#about-content-header {
+    color: #4E9F3D;
 }
 .abt {
     text-align: center;
@@ -209,12 +236,12 @@ button, #copy-button {
 footer {
     /* padding-top: 0.2%; */
     /* padding-bottom: 0.2%; */
-    background-color: #3B0B69; /* Glossy purple */
+    background: linear-gradient(145deg, #242424,#000000,#000000,#000000,#000000,#000000, #242424);
     text-align: center;
-    position: relative;  /* Ensure footer stays at bottom */
+    position: relative;
     bottom: 0;
     /* width: 100%; */
-    clear: both;         /* Clears any floating elements */
+    clear: both;
 }
 
 footer img {
@@ -254,4 +281,6 @@ footer a {
     scrollbar-width: thin;
     scrollbar-color: #3b3a47 #18181e; /* Thumb color, Track color */
 }
+
+
 
