@@ -257,30 +257,15 @@ footer a {
     
 }
 
-/* For Webkit browsers (Chrome, Safari, Edge) */
+/* Hide scrollbar for Chrome, Safari and Edge */
 ::-webkit-scrollbar {
-    width: 16px; /* Width of the scrollbar (wider) */
+    display: none;
 }
 
-::-webkit-scrollbar-track {
-    background: #18181e; /* Dark background color for the scrollbar track */
+/* Ensure scrolling still works */
+body {
+    -ms-overflow-style: none;  /* Hide scrollbar on IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar on Firefox */
 }
-
-::-webkit-scrollbar-thumb {
-    background-color: #3b3a47; /* Light gray color for the scrollbar thumb */
-    border-radius: 10px; /* Roundness of the thumb */
-    border: 6px solid #18181e; /* Creates space around the thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #3b3a47; /* Slightly darker gray when hovered */
-}
-
-/* For Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #3b3a47 #18181e; /* Thumb color, Track color */
-}
-
 
 
