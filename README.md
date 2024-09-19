@@ -24,7 +24,7 @@ The architecture of Prompt2Post includes the following AWS components:
 
 - **API Response**: Delivers the generated content back to the user in real-time after storage.
 
-![Architecture Diagram]("images/architecture.png")
+![Architecture Diagram]("./images/architecture.png")
 
 ---
 
