@@ -1,0 +1,257 @@
+/* General Settings */
+body {
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    background-color: #18181e;
+    color: #FFFFFF;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3B0B69; /* Glossy purple */
+    padding-left: 1%;
+    padding-right: 1%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    cursor: pointer;
+    font-size: 1.7rem; /* Increased size */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.1s ease;
+}
+
+.logo:hover {
+    color: #f892c8; /* Color on hover */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #efefef; /* Fluorescent pink */
+    text-decoration: none;
+    font-size: 1.2rem; /* Increased size */
+    font-weight:600;
+}
+
+.aboutnav:hover, .contactnav:hover {
+    color:#f892c8;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem; /* Increased heading size */
+    margin-bottom: 20px;
+    color: #FF1493; /* Fluorescent pink */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 1.5rem; /* Increased label size */
+    color: #FF1493; /* Fluorescent pink */
+}
+
+input {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 60px;
+    margin-bottom: 20px;
+    width: 350px; /* Increase input width */
+    font-size: 1.5rem; /* Increased text size */
+    font-family: "Courier New", monospace;
+}
+
+input::placeholder {
+    color: #ccc;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: #4B0082; /* Glossy purple */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.5rem; /* Increased button text size */
+    transition: all 0.3s ease;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: row; /* Horizontal alignment for buttons */
+    justify-content: center;
+    margin-top: 10px; /* Add spacing from input field */
+}
+
+button:hover {
+    background-color: #171e6d;
+    transform: scale(1.1);
+}
+
+#copy-button {
+    background-color: #4B0082; /* Same glossy purple */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    font-size: 1.5rem; /* Same size as other button */
+    margin-left: 10px; /* Adds spacing from the Generate button */
+}
+
+#copy-button:hover {
+    background-color: #171e6d; /* Hover effect */
+}
+
+button, #copy-button {
+    padding: 10px 20px; /* Reduced size */
+    font-size: 1.2rem;  /* Reduced font size */
+    margin-left: 10px;  /* Spacing between buttons */
+}
+
+
+/* Blog Content */
+#blog-content {
+    background-color: #444;
+    padding: 25px;
+    border-radius: 10px;
+    /* max-width: 600px; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 85%;
+    font-size: 1.5rem; /* Increased output text size */
+    min-height: 200px;  /* Ensures a base height */
+    overflow-y: auto;   /* Adds scrolling if content overflows */
+    word-wrap: break-word; /* Prevent long words from breaking the layout */
+}
+
+/* About Section */
+.about {
+    padding: 40px;
+    background-color: #18181e;
+    text-align: left;
+    font-size: 1.5rem; /* Increased about text size */
+    margin-top: 20px;  /* Add margin to ensure spacing */
+}
+.abt {
+    text-align: center;
+}
+.about ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    /* padding-top: 0.2%; */
+    /* padding-bottom: 0.2%; */
+    background-color: #3B0B69; /* Glossy purple */
+    text-align: center;
+    position: relative;  /* Ensure footer stays at bottom */
+    bottom: 0;
+    /* width: 100%; */
+    clear: both;         /* Clears any floating elements */
+}
+
+footer img {
+    width: 30px;
+    margin: 10px 20px;
+    filter: invert(100%);
+}
+
+footer a {
+    color: #FF1493; /* Fluorescent pink */
+    text-decoration: none;
+
+    
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 16px; /* Width of the scrollbar (wider) */
+}
+
+::-webkit-scrollbar-track {
+    background: #18181e; /* Dark background color for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3b3a47; /* Light gray color for the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the thumb */
+    border: 6px solid #18181e; /* Creates space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #3b3a47; /* Slightly darker gray when hovered */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3b3a47 #18181e; /* Thumb color, Track color */
+}
+

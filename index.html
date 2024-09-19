@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt2Post - AI Blog Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo" id="logo">> Prompt2Post</div>
+        <ul class="nav-links">
+            <li><a href="#about" class="aboutnav">About</a></li>
+            <li><a href="#contact" class="contactnav">Contact</a></li>
+        </ul>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container" id="main">
+        <h1>> Prompt2Post</h1>
+        <form id="blog-form">
+            <!-- <label for="topic">What's on your mind? 🤔</label> -->
+            <input type="text" id="topic" name="topic" placeholder="> What's on your mind?" required>
+            
+            <div class="button-group">
+                <button type="submit">Generate</button>
+                <button type="button" id="copy-button">Copy</button>
+            </div>
+        </form>
+        
+        <div id="blog-content">> Enter a topic above to start...</div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Prompt2Post</h2>
+        <p>
+            Tired of staring at a blank page, waiting for inspiration to strike? Say goodbye to writer's block and hello to Prompt2Post! Whether you're swamped with ideas or just need a spark to get started, our AI-powered blog generator has got your back.
+        </p>
+        <p>
+            Powered by cutting-edge AI models and integrated seamlessly with AWS services, Prompt2Post turns your thoughts into full-fledged, high-quality blog posts in a matter of seconds. Simply type in your topic, hit "Generate", and watch the magic happen. 🎩✨
+        </p>
+        <p>
+            Why waste hours crafting the perfect post when you can let our AI handle the heavy lifting? With human-like precision and creativity, Prompt2Post makes sure your content is engaging, informative, and absolutely on-point.
+        </p>
+        <p>
+            Perfect for bloggers, marketers, and anyone who needs to create content fast—Prompt2Post is the ultimate tool to transform your ideas into share-worthy articles. No fuss, no stress, just hit "Generate" and watch your blog take shape. 
+        </p>
+        <p>
+            Don't let blogging be a chore, let Prompt2Post turn it into a breeze! 🌬️💨
+        </p>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer id="contact">
+        <!-- <p>Connect with us:</p> -->
+        <a href="https://github.com/katharvaa"><img src="images/github-logo.svg" alt="GitHub"></a>
+        <a href="https://linkedin.com/in/kulkarni-atharva-g"><img src="images/linkedin-logo.svg" alt="LinkedIn"></a>
+        <a href="mailto:kulatharva1@gmail.com"><img src="images/gmail-logo.svg" alt="Email"></a>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Scroll to top on clicking the logo
+        document.getElementById('logo').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
