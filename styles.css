@@ -1,18 +1,22 @@
 /* General Settings */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     margin: 0;
     font-family: "Courier New", Courier, monospace;
-    /* background-color: #191A19; */
+    background: linear-gradient(35deg, #0d0d0d, #1a2a1e, #0a0a0a, #1d0f20);
     color: #FFFFFF;
     line-height: 1.6;
     font-size: 18px;
-    background: linear-gradient(35deg, #0d0d0d, #1a2a1e, #0a0a0a, #1d0f20); /* Very dark black, muted deep green, and pitch black */
-    height: 100vh;
-    margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -20,19 +24,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: #313331;  */
-    padding-left: 1%;
-    padding-right: 1%;
+    padding: 0% 1%;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: linear-gradient(145deg, #000000, #222121, #000000);
-    box-shadow: 0px 2px 4px rgba(18, 9, 24, 0.101); 
+    background: linear-gradient(145deg, #000000, #000000, #222121, #000000, #000000);
+    box-shadow: 0px 2px 4px rgba(18, 9, 24, 0.1);
 }
 
 .logo {
     cursor: pointer;
-    font-size: 1.7rem; /* Increased size */
+    font-size: 1.7rem;
     font-weight: bold;
     color: #4E9F3D;
     text-decoration: none;
@@ -40,7 +42,7 @@ nav {
 }
 
 .logo:hover {
-    color: #83dc73; /* Color on hover */
+    color: #83dc73;
 }
 
 .nav-links {
@@ -55,13 +57,14 @@ nav {
 .nav-links a {
     color: #4E9F3D;
     text-decoration: none;
-    font-size: 1.2rem; /* Increased size */
-    font-weight:600;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
-.aboutnav:hover, .contactnav:hover {
+.nav-links a:hover {
     color: #83dc73;
 }
+
 .burger {
     display: none;
     cursor: pointer;
@@ -74,12 +77,16 @@ nav {
     margin: 5px;
 }
 
-
 /* Responsive Navbar */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: none;
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #000;
     }
 
     .nav-links.active {
@@ -102,7 +109,7 @@ nav {
 }
 
 h1 {
-    font-size: 3rem; /* Increased heading size */
+    font-size: 3rem;
     margin-bottom: 20px;
     color: #4E9F3D;
 }
@@ -113,14 +120,14 @@ form {
     align-items: center;
 }
 
-#topic{
+#topic {
     font-family: Consolas, monaco, monospace;
     text-align: center;
 }
 
 label {
-    font-size: 1.5rem; /* Increased label size */
-    color: #FF1493; /* Fluorescent pink */
+    font-size: 1.5rem;
+    color: #FF1493;
 }
 
 input {
@@ -128,10 +135,11 @@ input {
     color: #fff;
     border: none;
     padding: 15px;
-    border-radius: 60px;
+    border-radius: 30px;
     margin-bottom: 20px;
-    width: 350px; /* Increase input width */
-    font-size: 1.5rem; /* Increased text size */
+    width: 100%;
+    max-width: 350px;
+    font-size: 1.5rem;
     font-family: "Courier New", monospace;
 }
 
@@ -143,90 +151,65 @@ input:focus {
     outline: none;
 }
 
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 button {
     background: linear-gradient(35deg, #6e3b79, #20233f,  #3d6347);
     color: white;
     padding: 15px 30px;
     border: none;
-    border-radius: 30px; /* Rounded button */
+    border-radius: 30px;
     cursor: pointer;
-    font-size: 1.5rem; /* Increased button text size */
+    font-size: 1.2rem;
     transition: all 0.3s ease;
-    font-family: Consolas, monaco, monospace;
-}
-
-.button-group {
-    display: flex;
-    flex-direction: row; /* Horizontal alignment for buttons */
-    justify-content: center;
-    margin-top: 10px; /* Add spacing from input field */
+    margin-left: 10px;
 }
 
 button:hover {
     background-color: #171e6d;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-#copy-button {
+#copy-button{
     background: linear-gradient(145deg, #3d6347, #20233f, #6e3b79);
-    color: white;
-    padding: 15px 30px;
-    border:#171e6d;
-    border-radius: 30px; /* Rounded button */
-    cursor: pointer;
-    font-size: 1.5rem; /* Same size as other button */
-    margin-left: 10px; /* Adds spacing from the Generate button */
 }
-
-#copy-button:hover {
-    background-color: #171e6d; /* Hover effect */
-}
-
-button, #copy-button {
-    padding: 10px 20px; /* Reduced size */
-    font-size: 1.2rem;  /* Reduced font size */
-    margin-left: 10px;  /* Spacing between buttons */
-}
-
 
 /* Blog Content */
 #blog-content {
     background-color: #444;
     padding: 25px;
-    border-radius: 10px;
-    /* max-width: 600px; */
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 85%;
+    border-radius: 20px;
+    width: 75%;
+    /* max-width: 800px; */
+    margin: 2% auto;
     font-family: Consolas, monaco, monospace;
-    font-size: 1.5rem; /* Increased output text size */
-    min-height: 200px;  /* Ensures a base height */
-    overflow-y: auto;   /* Adds scrolling if content overflows */
-    word-wrap: break-word; /* Prevent long words from breaking the layout */
+    font-size: 1.5rem;
+    min-height: 200px;
+    overflow-y: auto;
+    word-wrap: break-word;
 }
 
 /* About Section */
 .about {
     padding: 40px;
-    background-color: #191A19;
+    background: linear-gradient(35deg, #1d0f20, #0a0a0a, #1a2a1e, #0d0d0d);
     text-align: left;
-    font-size: 1.5rem; /* Increased about text size */
-    margin-top: 20px;  /* Add margin to ensure spacing */
-    background: linear-gradient(35deg, #0d0d0d, #1a2a1e, #0a0a0a, #1d0f20);
-    height: 100vh;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    
+    font-size: 1.5rem;
+    margin-top: 20px;
 }
 
 #about-content-header {
     color: #4E9F3D;
 }
+
 .abt {
     text-align: center;
 }
+
 .about ul {
     list-style-type: disc;
     margin-left: 20px;
@@ -234,14 +217,12 @@ button, #copy-button {
 
 /* Footer */
 footer {
-    /* padding-top: 0.2%; */
-    /* padding-bottom: 0.2%; */
+    /* padding: 10px 0; */
     background: linear-gradient(145deg, #242424,#000000,#000000,#000000,#000000,#000000, #242424);
     text-align: center;
-    position: relative;
+    position: static;
     bottom: 0;
-    /* width: 100%; */
-    clear: both;
+    width: 100%;
 }
 
 footer img {
@@ -251,10 +232,8 @@ footer img {
 }
 
 footer a {
-    color: #FF1493; /* Fluorescent pink */
+    color: #FF1493;
     text-decoration: none;
-
-    
 }
 
 /* Hide scrollbar for Chrome, Safari and Edge */
@@ -264,8 +243,6 @@ footer a {
 
 /* Ensure scrolling still works */
 body {
-    -ms-overflow-style: none;  /* Hide scrollbar on IE and Edge */
-    scrollbar-width: none;  /* Hide scrollbar on Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-
-
