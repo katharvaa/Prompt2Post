@@ -5,9 +5,8 @@ import json
 from datetime import datetime
 
 def blog_generate_using_bedrock(blogtopic:str)-> str:
-    prompt=f"""<s>[INST]Human: Write a 200-word blog on the topic provided below. Do not add any special characters, headings, formatting tags, or additional text (such as "here is your blog" or word count). Return only the blog content in plain text. The topic is: {blogtopic}
-Assistant:[/INST]
-"""
+    prompt = f"""<s>[INST]Human: Generate a concise 200-word blog on the topic below. Avoid special characters, headings, or formatting tags. Do not include any introductory phrases or word count. The topic is: {blogtopic} Assistant:[/INST]"""
+
 
 
     body={
