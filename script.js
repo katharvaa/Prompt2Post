@@ -13,7 +13,7 @@ document.getElementById('blog-form').addEventListener('submit', function(event) 
     const topic = document.getElementById('topic').value;
 
     // Show "Generating..." while waiting for the response
-    document.getElementById('blog-content').innerText = 'Generating';
+    document.getElementById('blog-content').innerText = 'Generating...';
 
     // Send blog topic via POST request to your AWS endpoint
     fetch('https://p9cefdi2aj.execute-api.us-east-1.amazonaws.com/dev/bloggeneration', {
