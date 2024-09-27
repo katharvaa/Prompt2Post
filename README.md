@@ -67,7 +67,7 @@ https://p9cefdi2aj.execute-api.us-east-1.amazonaws.com/dev/bloggeneration
 
 ``` javascript
 {
-    "blog_topic":"Generational choke ups"
+    "blog_topic":"Your_topic_name"
 }
 ```
 
